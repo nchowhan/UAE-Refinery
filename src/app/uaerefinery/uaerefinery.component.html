@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>UAE - Demographics Data</title>
+<h1>NNNNNNNN</h1>
+
+<!-- Optimize for mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- StyleSheets -->
+<style type="text/css">
+ 
+
+.shadow {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+ .round {
+  border-radius: 20px; /* 5/16 */
+  -moz-border-radius: 0.3125em; /* 5/16 */
+  -webkit-border-radius: 0.3125em; /* 5/16 */
+}
+ 
+ .button {
+  padding: 0.833em; /* 10/12 */
+  display: inline-block;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  border: none;
+  margin-top: 0.2em;
+  font-size: 1em;
+}
+
+.blue {
+  background-color: #2069b4;
+  color: white;
+}
+
+html,body {
+  position: relative;
+  max-height: 700px;
+  min-width: 1000px;
+  min-height: 650px;
+  margin: auto;
+}
+.body {
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background:
+    url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0NCUiIHN0b3AtY29sb3I9IiM1Nzc0YWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MyUiIHN0b3AtY29sb3I9IiM1Nzc0YWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTc3NGFlIiBzdG9wLW9wYWNpdHk9IjAiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-linear-gradient(top, rgba(87, 116, 174, 1) 44%,
+    rgba(87, 116, 174, 1) 63%, rgba(87, 116, 174, 0) 100% ); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(44%, rgba(87,
+    116, 174, 1) ), color-stop(63%, rgba(87, 116, 174, 1) ),
+    color-stop(100%, rgba(87, 116, 174, 0) ) ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(87, 116, 174, 1) 44%,
+    rgba(87, 116, 174, 1) 63%, rgba(87, 116, 174, 0) 100% );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(87, 116, 174, 1) 44%,
+    rgba(87, 116, 174, 1) 63%, rgba(87, 116, 174, 0) 100% );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(87, 116, 174, 1) 44%,
+    rgba(87, 116, 174, 1) 63%, rgba(87, 116, 174, 0) 100% ); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(87, 116, 174, 1) 44%,
+    rgba(87, 116, 174, 1) 63%, rgba(87, 116, 174, 0) 100% ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#5774ae',
+    endColorstr='#005774ae', GradientType=0 ); /* IE6-8 */
+  min-width: 1000px;
+}
+
+@font-face {
+  font-family: 'BebasNeueRegular';
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+</style>
+
+<!-- jQuery & JS files -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/ae/ae-all.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<script type="text/javascript">
+  
+  function openPopUp() {
+    window.open("UploadLink", "Upload", 'fullscreen=no,toolbar=yes,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,toolbar=no,width=750,height=700,top=100,left:1000');
+  }
+ 
+
+ // Prepare demo data
+// Data is joined to map using value of 'hc-key' property by default.
+// See API docs for 'joinBy' for more info on linking data and map.
+var data = [
+    ['ae-az', 0],
+    ['ae-du', 1],
+    ['ae-sh', 2],
+    ['ae-rk', 3],
+    ['ae-uq', 4],
+    ['ae-fu', 5],
+    ['ae-740', 6],
+    ['ae-aj', 7],
+    ['ae-742', 8]
+];
+
+  $(document).ready(function () {  
+// Create the chart
+this.mapChart = new MapChart({
+      chart: {
+          map: 'countries/ae/ae-all',
+          backgroundColor : null,
+  
+      },
+  
+      title: {
+          text: 'United Arab Emirates',
+                style: {
+           color: '#FFF',
+           font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+        }
+  
+      },
+  
+  mapNavigation: {
+      enabled: false,
+    },
+  
+  labels:
+  {
+    enabled: false
+  },
+  
+  legend:
+  {
+    enabled: false
+  },
+  
+      colorAxis: {
+          min: 0
+      },
+  
+        xAxis: {  
+                visible : false ,
+            }, 
+  
+                    credits: {
+          enabled: false
+      },
+  
+      exporting: {
+           enabled: false
+  },
+  
+  tooltip: { enabled: false },
+  
+      series: [{
+        showInLegend: false,
+          data: data,
+          name: '',
+  
+          dataLabels: {
+              enabled: true,
+              format: '{point.name}'
+          }
+      }]
+});
+
+});
+
+var columnList = ["Region","Investment","RegionFactor1", "RegionFactor2","RegionFactor3", "InterRegionInfluence", "OverAllRegionPerformance", "SiteName","Site Factor 1","Site Factor 2","Site Factor 3",
+"Location", "Political Influence","Locality Influence", "OverAllSitePerformance","RefinaryName","CrudeOil","Temperature",
+"AnilinePoint","APIgravity","SulphurContent","Viscosity","ReidVaporPressure","AsphaltenesCarbonResidue","OilQuality",
+"RefinaryNodePerformace","type"];
+
+  
+  $(document).ready(function () {  
+      $.ajax({  
+          type: "GET",  
+          contentType: "application/json; charset=utf-8",  
+          url: "/Region",  
+          data: "{}",  
+          dataType: "json",  
+          async : false,
+          success: function (Result) {  
+    
+              var data = [];  
+             
+              Result.results.forEach(function(a){
+                  var serie = { name: a["Region"], y: 10, drilldown: a["Region"], sliced:true, type :"Region"}; 
+
+                for (var key in a) {
+                if (a.hasOwnProperty(key)) {
+                serie[key] = a[key];
+                }
+                }
+
+                  if(a['OverAllRegionPerformance'].toLowerCase()  == "BEST".toLowerCase() ) {
+                    serie.color="green";
+                  }
+                  else if(a['OverAllRegionPerformance'].toLowerCase()  == "AVERAGE".toLowerCase()
+                    || a['OverAllRegionPerformance'].toLowerCase()  == "BETTER".toLowerCase()){
+                    serie.color="yellow";
+                  }
+
+                  else if(a['OverAllRegionPerformance'].toLowerCase()  == "GOOD".toLowerCase()){
+                      serie.color="red";
+                  }
+
+                  data.push(serie); 
+
+              });
+              
+              regionPoint = Object.assign({}, data[0]);
+            regionPieData = data; 
+
+
+              BindChart(data);  
+          },  
+          error: function (Result) {  
+             // alert("Error");  
+          }  
+      });  
+
+
+
+  });  
+  
+  
+  var parentPoint = "";
+ 
+  function BindChart(seriesArr) {  
+
+      var columnChart = new Highcharts.chart('container', {  
+          chart: {  
+              
+            defaultSeriesType: 'pie',  
+              borderWidth: 0,
+              width: 650,  
+               zoomType: 'x',
+               backgroundColor: null,
+                       options3d: {
+            enabled: true,
+            alpha: 15,
+            beta: 15,
+            depth: 50,
+            viewDistance: 25
+        },
+
+              events: {  
+
+                load : function (){
+       
+  var content = "<h1 align='center' style='text-shadow:2px 2px;'> Demographic Data </h1>"; 
+
+                      for (key in regionPoint) {
+                       if (regionPoint.hasOwnProperty(key) && columnList.includes(key) && (key != "type")) {
+
+                          if(regionPoint["type"] == "Region" || regionPoint["type"] == "Site")
+                       content = content + "<div style='margin-bottom:20px;margin-left:50px;font-size:20px;'>"; 
+                     else
+                      content = content + "<div style='margin-bottom:10px;margin-left:50px;font-size:11px;'>"; 
+
+                      content = content + "<b>"+key+ ":</b> " + regionPoint[key];
+                       content = content + "</div>";
+                       }
+                    }
+
+                                        $("#detail").html(content);
+                    $("#detail").show("slide", { direction: "left" }, 1000);
+                },
+
+                  drillup : function(e) {
+
+              
+
+                                   var content = "<h1 align='center' style='text-shadow:2px 2px;'> Demographic Data </h1>";
+                    
+                    if(e.seriesOptions.data[0].type == "Site"){
+                    for (key in currentSitePoint) {
+                       if (currentSitePoint.hasOwnProperty(key) && columnList.includes(key) && (key != "type")) {
+
+                          if(currentSitePoint["type"] == "Region" || currentSitePoint["type"] == "Site")
+                       content = content + "<div style='margin-bottom:20px;margin-left:50px;font-size:20px;'>"; 
+                     else
+                      content = content + "<div style='margin-bottom:10px;margin-left:50px;font-size:11px;'>"; 
+
+                      content = content + "<b>"+key+ ":</b> " + currentSitePoint[key];
+                       content = content + "</div>";
+                       }
+                    }
+
+
+
+
+                    var pieChart = new Highcharts.chart('pieContainer', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        backgroundColor: null,
+       
+        type: 'pie',
+               options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'United Arab Emirates - Demographic Data',
+                      style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+    },
+        exporting: {
+         enabled: false
+},
+                      credits: {
+        enabled: false
+    },
+
+        tooltip : {
+        formatter: function() {
+            var tooltip;
+
+          t=this;
+          var performance ;
+
+            if(this.color == "green"){
+          performance = "Overall performance : Best";
+            }
+              else    if(this.color == "yellow"){
+              performance = "Overall performance : Better";
+            }
+              else if(this.color == "red"){
+              performance = "Overall performance : Good"
+            }
+            tooltip =  '<span style="color:' + this.color + '">' + this.key+ '<br>'+performance +'</span><br/>';
+    
+            return tooltip;
+        }
+    }, 
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+              format: '<b>{point.name}</b>',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Regions',
+        colorByPoint: true,
+        data: sitePieData
+    }]
+});
+
+                  }
+
+                  else {
+                          for (key in currentRegionPoint) {
+                       if (currentRegionPoint.hasOwnProperty(key) && columnList.includes(key) && (key != "type")) {
+
+                          if(currentRegionPoint["type"] == "Region" || currentRegionPoint["type"] == "Site")
+                       content = content + "<div style='margin-bottom:20px;margin-left:50px;font-size:20px;'>"; 
+                     else
+                      content = content + "<div style='margin-bottom:10px;margin-left:50px;font-size:11px;'>"; 
+
+                      content = content + "<b>"+key+ ":</b> " + currentRegionPoint[key];
+                       content = content + "</div>";
+                       }
+                    }
+
+
+
+                    var pieChart = new Highcharts.chart('pieContainer', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        backgroundColor: null,
+       
+        type: 'pie',
+               options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'United Arab Emirates - Demographic Data',
+                      style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+    },
+        exporting: {
+         enabled: false
+},
+                      credits: {
+        enabled: false
+    },
+
+        tooltip : {
+        formatter: function() {
+            var tooltip;
+
+          t=this;
+          var performance ;
+
+            if(this.color == "green"){
+          performance = "Overall performance : Best";
+            }
+              else    if(this.color == "yellow"){
+              performance = "Overall performance : Better";
+            }
+              else if(this.color == "red"){
+              performance = "Overall performance : Good"
+            }
+            tooltip =  '<span style="color:' + this.color + '">' + this.key+ '<br>'+performance +'</span><br/>';
+    
+            return tooltip;
+        }
+    }, 
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+              format: '<b>{point.name}</b>',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Regions',
+        colorByPoint: true,
+        data: regionPieData
+    }]
+});
+
+
+                  }
+                   
+                    $("#detail").html(content);
+                    $("#detail").show("slide", { direction: "left" }, 1000);
+
+                  }, 
+                  drilldown: function (e) {  
+                   
+                      if (!e.seriesOptions) {  
+                          chart = this;  
+                          
+                       var drillDownType ="";
+                          if(e.point.type == "Region"){
+                            currentRegionPoint = Object.assign({}, e.point);
+                            parentPoint = e.point.name;
+                            drillDownType = e.point.name + "\'s Sites";
+
+                          }
+                          else {
+                            currentSitePoint = Object.assign({}, e.point);
+                            drillDownType = e.point.name + "\'s Refineries";
+                          }
+
+                       
+
+                          chart.showLoading('Loading ' + drillDownType +  ' Data');  
+                          var dataArr = CallChild(parentPoint, e.point.name,e.point.type);  
+
+
+
+                          chart.setTitle({  
+                              text: 'United Arab Emirates - Demographic Data' ,
+                                            style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+                              
+                          });  
+                          data = {  
+                              name: e.point.name,  
+                              data: dataArr  
+                          } 
+
+
+                          setTimeout(function () {  
+                              chart.hideLoading();  
+                              chart.addSeriesAsDrilldown(e.point, data);  
+
+                  
+                    var content = "<h1 align='center' style='text-shadow:2px 2px;'> Demographic Data </h1>";
+                    
+                    for (key in e.target.series[0].userOptions.data[0]) {
+                       if (e.target.series[0].userOptions.data[0].hasOwnProperty(key) && columnList.includes(key)  && (key != "type")) {
+
+                          if(e.target.series[0].userOptions.data[0]["type"] == "Region" || e.target.series[0].userOptions.data[0]["type"] == "Site")
+                       content = content + "<div style='margin-bottom:20px;margin-left:50px;font-size:20px;'>"; 
+                     else
+                      content = content + "<div style='margin-bottom:10px;margin-left:50px;font-size:11px;'>"; 
+                      content = content + "<b>"+key+ ":</b> " + e.target.series[0].userOptions.data[0][key];
+                       content = content + "</div>";
+                       }
+                    }
+                   
+                    $("#detail").html(content);
+                    $("#detail").show("slide", { direction: "left" }, 1000);
+
+
+
+                          }, 1000);  
+
+                      }  
+                  }  
+              }  
+          },  
+          title: {  
+              text: 'United Arab Emirates - Demographic Data'  ,
+                            style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+              
+          },  
+              lang: {
+        drillUpText: 'Back To {series.name}',
+              position: {
+        width: 100,
+        height: 20
+      }
+    },
+
+        exporting: {
+         enabled: false
+},
+          xAxis: {  
+              type: 'category' ,
+          min: 0,
+            max:2,
+
+      scrollbar: {
+          enabled:true,
+/*      barBackgroundColor: 'gray',
+      barBorderRadius: 7,
+      barBorderWidth: 0,
+      buttonBackgroundColor: 'gray',
+      buttonBorderWidth: 0,
+      buttonArrowColor: 'yellow',
+      buttonBorderRadius: 7,
+      rifleColor: 'yellow',
+      trackBackgroundColor: 'white',
+      trackBorderWidth: 1,
+      trackBorderColor: 'silver',
+      trackBorderRadius: 7*/
+        },
+       
+          },  
+
+
+              credits: {
+        enabled: false
+    },
+
+        tooltip : {
+        formatter: function() {
+            var tooltip;
+
+          t=this;
+          var performance ;
+
+            if(this.color == "green"){
+          performance = "Overall performance : Best";
+            }
+              else    if(this.color == "yellow"){
+              performance = "Overall performance : Better";
+            }
+              else if(this.color == "red"){
+              performance = "Overall performance : Good"
+            }
+            tooltip =  '<span style="color:' + this.color + '">' + this.key+ '<br>'+performance +'</span><br/>';
+    
+            return tooltip;
+        }
+    }, 
+  
+        yAxis: {
+            visible : false,
+         labels:{enabled: false},
+         gridLineWidth: 0,
+         minorGridLineWidth: 0,
+         max :15,
+         title: {
+          text: null,
+          align:'high'
+         }},
+
+
+
+
+      legend: {
+          enabled: false
+      },
+  
+          plotOptions: {  
+              series: {  
+                  borderWidth: 0,  
+                  dataLabels: {  
+                      enabled: false  
+                  } ,
+
+              pointWidth :40,
+               groupPadding: 0.4,
+              pointPadding: 0 ,
+
+              point : {
+
+                events : {
+
+                  mouseOver : function () {
+              
+
+                    var content = "<h1 align='center' style='text-shadow:2px 2px;'> Demographic Data </h1>";
+                    
+                    for (key in this) {
+                       if (this.hasOwnProperty(key) && columnList.includes(key)  && (key != "type")) {
+
+                        if(this["type"] == "Region" || this["type"] == "Site")
+                       content = content + "<div style='margin-bottom:20px;margin-left:50px;font-size:20px;'>"; 
+                     else
+                      content = content + "<div style='margin-bottom:10px;margin-left:50px;font-size:11px;'>"; 
+
+                      content = content + "<b>"+key+ ":</b> " + this[key];
+                       content = content + "</div>";
+                       }
+                    }
+                   
+                    $("#detail").html(content);
+                    $("#detail").show("slide", { direction: "left" }, 1000);
+
+                  },
+
+                }
+              }
+              }  
+          },  
+          series: [{  
+              name: 'Regions',  
+              colorByPoint: true,  
+              data: seriesArr  ,
+          }],  
+  
+          drilldown: {  
+              series: []  
+          }  
+      }); 
+
+
+
+      var pieChart = new Highcharts.chart('pieContainer', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        backgroundColor:null,
+       
+        type: 'pie',
+               options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'United Arab Emirates - Demographic Data',
+                      style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+    },
+
+                      credits: {
+        enabled: false
+    },
+
+        exporting: {
+         enabled: false
+},
+
+        tooltip : {
+        formatter: function() {
+            var tooltip;
+
+          t=this;
+          var performance ;
+
+            if(this.color == "green"){
+          performance = "Overall performance : Best";
+            }
+              else    if(this.color == "yellow"){
+              performance = "Overall performance : Better";
+            }
+              else if(this.color == "red"){
+              performance = "Overall performance : Good"
+            }
+            tooltip =  '<span style="color:' + this.color + '">' + this.key+ '<br>'+performance +'</span><br/>';
+    
+            return tooltip;
+        }
+    }, 
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+              format: '<b>{point.name}</b>',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Regions',
+        colorByPoint: true,
+        data: seriesArr
+    }]
+}); 
+  }  
+  
+  function CallChild(parentPoint, name, type) {  
+      var Drilldowndata = [];  
+
+  
+      var url = "";
+      if(type == "Region"){
+        url = "/Site";
+      }
+      else {
+        url = "/Refinery";
+      }
+
+
+      $.ajax({  
+          type: "GET",  
+          contentType: "application/json; charset=utf-8",  
+          url: url,  
+          data: { point: name, parentPoint : parentPoint},  
+          dataType: "json",  
+          async : false,
+          success: function (Result) { 
+
+if(type == "Region"){ 
+
+                abc = Result;
+                          Result.results.forEach(function(a){
+                  var serie = { name: a.SiteName, y: 10, drilldown: a["OverAllSitePerformance"], type :"Site", sliced:true }; 
+
+                                  for (var key in a) {
+                if (a.hasOwnProperty(key)) {
+                serie[key] = a[key];
+                }
+                } 
+
+                                   if(a["OverAllSitePerformance"].toLowerCase()  == "BEST".toLowerCase()) {
+                    serie.color="green";
+                  }
+                  else if(a["OverAllSitePerformance"].toLowerCase()  == "AVERAGE".toLowerCase()
+                    || a["OverAllSitePerformance"].toLowerCase()  == "BETTER".toLowerCase()){
+                    serie.color="yellow";
+                  }
+
+                  else if(a["OverAllSitePerformance"].toLowerCase()  == "GOOD".toLowerCase()){
+                      serie.color="red";
+                  }
+
+                 Drilldowndata.push(serie);
+
+              });  
+
+               sitePieData =    Drilldowndata; sitePieData[0]["sliced"] = true;       
+              }
+              
+              else {
+
+
+                         Result.results.forEach(function(a){
+                  var serie = { name: a.RefinaryName, y: 10, type :"Refinery" , sliced:true}; 
+
+                                  for (var key in a) {
+                if (a.hasOwnProperty(key)) {
+                serie[key] = a[key];
+                }
+                }
+
+                                   if(a.RefinaryNodePerformace.toLowerCase()  == "BEST".toLowerCase()) {
+                    serie.color="green";
+                  }
+                  else if(a.RefinaryNodePerformace.toLowerCase()  == "AVERAGE".toLowerCase()
+                    || a.RefinaryNodePerformace.toLowerCase()  == "BETTER".toLowerCase()){
+                    serie.color="yellow";
+                  }
+
+                  else if(a.RefinaryNodePerformace.toLowerCase()  == "GOOD".toLowerCase()){
+                      serie.color="red";
+                  } 
+                 Drilldowndata.push(serie);
+
+
+});
+
+Drilldowndata[0]["sliced"] = true;   
+              }            
+
+
+             
+
+                    var pieChart = new Highcharts.chart('pieContainer', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        backgroundColor: null,
+       
+        type: 'pie',
+               options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'United Arab Emirates - Demographic Data',
+                      style: {
+         color: '#FFF',
+         font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+    },
+        exporting: {
+         enabled: false
+},
+                      credits: {
+        enabled: false
+    },
+
+        tooltip : {
+        formatter: function() {
+            var tooltip;
+
+          t=this;
+          var performance ;
+
+            if(this.color == "green"){
+          performance = "Overall performance : Best";
+            }
+              else    if(this.color == "yellow"){
+              performance = "Overall performance : Better";
+            }
+              else if(this.color == "red"){
+              performance = "Overall performance : Good"
+            }
+            tooltip =  '<span style="color:' + this.color + '">' + this.key+ '<br>'+performance +'</span><br/>';
+    
+            return tooltip;
+        }
+    }, 
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+              format: '<b>{point.name}</b>',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Regions',
+        colorByPoint: true,
+        data: Drilldowndata
+    }]
+});
+
+
+
+
+          },  
+          error: function (Result) {  
+              alert("Error");  
+          }  
+      }) 
+
+      return Drilldowndata;  
+  }  
+
+ var event = $(document).click(function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    return false;
+}) ;
+
+
+  
+    $(function () {
+      
+    
+        window.onload = maxWindow;
+
+        function maxWindow() {
+            window.moveTo(0, 0);
+
+
+            if (document.all) {
+                top.window.resizeTo(screen.availWidth, screen.availHeight);
+            }
+
+            else if (document.layers || document.getElementById) {
+                if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                    top.window.outerHeight = screen.availHeight;
+                    top.window.outerWidth = screen.availWidth;
+                }
+            }
+        }
+    
+    });
+</script>
+</head>
+
+<body class="body">
+<div style="height: 30px;">
+  <a href="#" onclick="openPopUp();" class="round button blue shadow" style="float:right;">Upload</a>
+ 
+</div>
+
+<div id="map" style="min-width: 310px; height: 250px; width: 90%; margin: 0 auto;"></div>
+<div style="height: 50px"></div>
+<div id="container" style="height: 350px;width: 40%;  margin-left:2% ;display: inline-block;"></div>
+<div style="display:none; float:right;margin-right:2%;width: 42%;height: 350px;border-style: none; border-color: #335cad;  border-radius:0px;background-color:#ffffff;" id="detail">
+</div>
+<div style="height: 30px"></div>
+
+<div id="pieContainer" style="height: 350px;width: 650px;margin:0 auto ;display: block;"></div><!-- </div> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
